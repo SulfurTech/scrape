@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="uk">
+
+	<head>
+
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+		
+		<link rel="preconnect" href="https://www.googletagmanager.com"/>
+
+		<link rel="profile" href="https://gmpg.org/xfn/11">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+
+			<!-- Inlined Google Font loading -->
+	<style>
+	/* cyrillic-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459WRhyyTh89ZNpQ.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459W1hyyTh89ZNpQ.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459WdhyyTh89ZNpQ.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE3gTD_vx3rCubqg.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE3g3D_vx3rCubqg.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE3gfD_vx3rCubqg.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/montserrat/v15/JTURjIg1_i6t8kCHKm45_dJE3gnD_vx3rCs.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFWJ0bf8pkAp6a.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFUZ0bf8pkAp6a.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFWp0bf8pkAp6a.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFW50bf8pkAp6a.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UNirkOX-hpKKSTj5PW.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UNirkOVuhpKKSTj5PW.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UNirkOXehpKKSTj5PW.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UNirkOXOhpKKSTj5PW.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UNirkOUuhpKKSTjw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN7rgOX-hpKKSTj5PW.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN7rgOVuhpKKSTj5PW.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN7rgOXOhpKKSTj5PW.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN7rgOUuhpKKSTjw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN8rsOX-hpKKSTj5PW.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN8rsOVuhpKKSTj5PW.woff2) format('woff2');
+  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN8rsOXOhpKKSTj5PW.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/opensans/v18/mem5YaGs126MiZpBA-UN8rsOUuhpKKSTjw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}	</style>
+	 
+
+		<meta property="og:description" content="Найкращі онлайн-курси України та світу" />
+		<meta property="og:title" content="Prometheus" />
+		<meta property="og:url" content="https://prometheus.org.ua/" />
+		<meta property="og:image" content="https://prometheus.org.ua/wp-content/themes/prometheus/assets/images/logo_fb_wh.png" />
+		<meta property="fb:app_id" content="345443742508330" />
+
+		<title>Каталог програм &#8211; Prometheus</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel='dns-prefetch' href='//prometheus.org.ua' />
+<link rel='dns-prefetch' href='//www.google.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Prometheus &raquo; стрічка" href="https://prometheus.org.ua/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Prometheus &raquo; Канал коментарів" href="https://prometheus.org.ua/comments/feed/" />
+		<script>
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/prometheus.org.ua\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.2"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style>
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel="stylesheet" href="https://prometheus.org.ua/?x51294&amp;w3tc_minify=61ba1.css" media="all" />
+
+
+
+
+
+
+<style id='prometheus-style-inline-css'>
+.color-accent,.color-accent-hover:hover,.color-accent-hover:focus,:root .has-accent-color,.has-drop-cap:not(:focus):first-letter,.wp-block-button.is-style-outline,a { color: #cd2653; }blockquote,.border-color-accent,.border-color-accent-hover:hover,.border-color-accent-hover:focus { border-color: #cd2653; }button,.button,.faux-button,.wp-block-button__link,.wp-block-file .wp-block-file__button,input[type="button"],input[type="reset"],input[type="submit"],.bg-accent,.bg-accent-hover:hover,.bg-accent-hover:focus,:root .has-accent-background-color,.comment-reply-link { background-color: #cd2653; }.fill-children-accent,.fill-children-accent * { fill: #cd2653; }body,.entry-title a,:root .has-primary-color { color: #000000; }:root .has-primary-background-color { background-color: #000000; }cite,figcaption,.wp-caption-text,.post-meta,.entry-content .wp-block-archives li,.entry-content .wp-block-categories li,.entry-content .wp-block-latest-posts li,.wp-block-latest-comments__comment-date,.wp-block-latest-posts__post-date,.wp-block-embed figcaption,.wp-block-image figcaption,.wp-block-pullquote cite,.comment-metadata,.comment-respond .comment-notes,.comment-respond .logged-in-as,.pagination .dots,.entry-content hr:not(.has-background),hr.styled-separator,:root .has-secondary-color { color: #6d6d6d; }:root .has-secondary-background-color { background-color: #6d6d6d; }pre,fieldset,input,textarea,table,table *,hr { border-color: #dcd7ca; }caption,code,code,kbd,samp,.wp-block-table.is-style-stripes tbody tr:nth-child(odd),:root .has-subtle-background-background-color { background-color: #dcd7ca; }.wp-block-table.is-style-stripes { border-bottom-color: #dcd7ca; }.wp-block-latest-posts.is-grid li { border-top-color: #dcd7ca; }:root .has-subtle-background-color { color: #dcd7ca; }body:not(.overlay-header) .primary-menu > li > a,body:not(.overlay-header) .primary-menu > li > .icon,.modal-menu a,.footer-menu a, .footer-widgets a,#site-footer .wp-block-button.is-style-outline,.wp-block-pullquote:before,.singular:not(.overlay-header) .entry-header a,.archive-header a,.header-footer-group .color-accent,.header-footer-group .color-accent-hover:hover { color: #cd2653; }.social-icons a,#site-footer button:not(.toggle),#site-footer .button,#site-footer .faux-button,#site-footer .wp-block-button__link,#site-footer .wp-block-file__button,#site-footer input[type="button"],#site-footer input[type="reset"],#site-footer input[type="submit"] { background-color: #cd2653; }.header-footer-group,body:not(.overlay-header) #site-header .toggle,.menu-modal .toggle { color: #000000; }body:not(.overlay-header) .primary-menu ul { background-color: #000000; }body:not(.overlay-header) .primary-menu > li > ul:after { border-bottom-color: #000000; }body:not(.overlay-header) .primary-menu ul ul:after { border-left-color: #000000; }.site-description,body:not(.overlay-header) .toggle-inner .toggle-text,.widget .post-date,.widget .rss-date,.widget_archive li,.widget_categories li,.widget cite,.widget_pages li,.widget_meta li,.widget_nav_menu li,.powered-by-wordpress,.to-the-top,.singular .entry-header .post-meta,.singular:not(.overlay-header) .entry-header .post-meta a { color: #6d6d6d; }.header-footer-group pre,.header-footer-group fieldset,.header-footer-group input,.header-footer-group textarea,.header-footer-group table,.header-footer-group table *,.footer-nav-widgets-wrapper,#site-footer,.menu-modal nav *,.footer-widgets-outer-wrapper,.footer-top { border-color: #dcd7ca; }.header-footer-group table caption,body:not(.overlay-header) .header-inner .toggle-wrapper::before { background-color: #dcd7ca; }
+body,input,textarea,button,.button,.faux-button,.wp-block-button__link,.wp-block-file__button,.has-drop-cap:not(:focus)::first-letter,.has-drop-cap:not(:focus)::first-letter,.entry-content .wp-block-archives,.entry-content .wp-block-categories,.entry-content .wp-block-cover-image,.entry-content .wp-block-latest-comments,.entry-content .wp-block-latest-posts,.entry-content .wp-block-pullquote,.entry-content .wp-block-quote.is-large,.entry-content .wp-block-quote.is-style-large,.entry-content .wp-block-archives *,.entry-content .wp-block-categories *,.entry-content .wp-block-latest-posts *,.entry-content .wp-block-latest-comments *,.entry-content p,.entry-content ol,.entry-content ul,.entry-content dl,.entry-content dt,.entry-content cite,.entry-content figcaption,.entry-content .wp-caption-text,.comment-content p,.comment-content ol,.comment-content ul,.comment-content dl,.comment-content dt,.comment-content cite,.comment-content figcaption,.comment-content .wp-caption-text,.widget_text p,.widget_text ol,.widget_text ul,.widget_text dl,.widget_text dt,.widget-content .rssSummary,.widget-content cite,.widget-content figcaption,.widget-content .wp-caption-text { font-family: 'Helvetica Neue',Helvetica,'Segoe UI',Arial,sans-serif; }
+</style>
+<link rel="stylesheet" href="https://prometheus.org.ua/?x51294&amp;w3tc_minify=67189.css" media="all" />
+
+
+<link rel='stylesheet' id='prometheus-print-style-css'  href='https://prometheus.org.ua/wp-content/themes/prometheus/print.css?x51294&amp;ver=1.21' media='print' />
+
+
+
+
+<style id='elementor-frontend-inline-css'>
+@font-face{font-family:eicons;src:url(https://prometheus.org.ua/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0);src:url(https://prometheus.org.ua/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.eot?5.10.0#iefix) format("embedded-opentype"),url(https://prometheus.org.ua/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff2?5.10.0) format("woff2"),url(https://prometheus.org.ua/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.woff?5.10.0) format("woff"),url(https://prometheus.org.ua/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.ttf?5.10.0) format("truetype"),url(https://prometheus.org.ua/wp-content/plugins/elementor/assets/lib/eicons/fonts/eicons.svg?5.10.0#eicon) format("svg");font-weight:400;font-style:normal}
+</style>
+<link rel="stylesheet" href="https://prometheus.org.ua/?x51294&amp;w3tc_minify=930f3.css" media="all" />
+
+
+<style id='__EPYT__style-inline-css'>
+
+                .epyt-gallery-thumb {
+                        width: 33.333%;
+                }
+                
+</style>
+<script src="https://prometheus.org.ua/?x51294&amp;w3tc_minify=d52ed.js"></script>
+
+<script src="https://prometheus.org.ua/?x51294&amp;w3tc_minify=7e038.js"></script>
+
+<script id='bodhi_svg_inline-js-after'>
+cssTarget="img.style-svg";ForceInlineSVGActive="false";
+</script>
+<script src="https://prometheus.org.ua/?x51294&amp;w3tc_minify=98341.js"></script>
+
+<script id='__ytprefs__-js-extra'>
+var _EPYT_ = {"ajaxurl":"https:\/\/prometheus.org.ua\/wp-admin\/admin-ajax.php","security":"0276aa6ca4","gallery_scrolloffset":"20","eppathtoscripts":"https:\/\/prometheus.org.ua\/wp-content\/plugins\/youtube-embed-plus\/scripts\/","eppath":"https:\/\/prometheus.org.ua\/wp-content\/plugins\/youtube-embed-plus\/","epresponsiveselector":"[\"iframe.__youtube_prefs__\"]","epdovol":"1","version":"13.4.3","evselector":"iframe.__youtube_prefs__[src], iframe[src*=\"youtube.com\/embed\/\"], iframe[src*=\"youtube-nocookie.com\/embed\/\"]","ajax_compat":"","ytapi_load":"light","pause_others":"","stopMobileBuffer":"1","vi_active":"","vi_js_posttypes":[]};
+</script>
+<script src="https://prometheus.org.ua/?x51294&amp;w3tc_minify=8fc7a.js"></script>
+
+<link rel="https://api.w.org/" href="https://prometheus.org.ua/wp-json/" /><link rel="alternate" type="application/json" href="https://prometheus.org.ua/wp-json/wp/v2/pages/13782" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://prometheus.org.ua/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://prometheus.org.ua/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 5.8.2" />
+<link rel="canonical" href="https://prometheus.org.ua/courses-catalog/" />
+<link rel='shortlink' href='https://prometheus.org.ua/?p=13782' />
+<link rel="alternate" type="application/json+oembed" href="https://prometheus.org.ua/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fprometheus.org.ua%2Fcourses-catalog%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://prometheus.org.ua/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fprometheus.org.ua%2Fcourses-catalog%2F&#038;format=xml" />
+<style type='text/css'> .ae_data .elementor-editor-element-setting {
+            display:none !important;
+            }
+            </style>	<script>document.documentElement.className = document.documentElement.className.replace( 'no-js', 'js' );</script>
+	<link rel="icon" href="https://prometheus.org.ua/wp-content/uploads/2021/03/cropped-favicon-32x32.png?x51294" sizes="32x32" />
+<link rel="icon" href="https://prometheus.org.ua/wp-content/uploads/2021/03/cropped-favicon-192x192.png?x51294" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://prometheus.org.ua/wp-content/uploads/2021/03/cropped-favicon-180x180.png?x51294" />
+<meta name="msapplication-TileImage" content="https://prometheus.org.ua/wp-content/uploads/2021/03/cropped-favicon-270x270.png" />
+
+		<meta name="norton-safeweb-site-verification" content="16ht93m3jp1-v2hs8dxmdm6wqdgmpslyp2s1i3pt0fcgehhn6vff713hbm0tphz3rqxkuttgp81nn--jyksb-yx2dhj9t06h9-8cpyc0p0hl59ein01xij1jdn0vd1kx" />
+
+		<!-- e-Sputnik -->
+		<script>
+			(function(i,s,o,g,r,a,m){
+			i["esSdk"] = r;
+			i[r] = i[r] || function() {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, a=s.createElement(o), m=s.getElementsByTagName(o)[0]; a.async=1; a.src=g;
+			m.parentNode.insertBefore(a,m)}
+			) (window, document, "script", "https://esputnik.com/scripts/v1/public/scripts?apiKey=eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI0NTI0ZWZhYTJkYzI2MGRmYTM4YTE1NDBlMWIwYjA1M2Q1YmIzZDEwM2M2ZWNhODEwMWE3NDU2YmRhODY1OTFlNjhhZWUxM2YwMmEyYWM2MjZmNDU3YWY5YzcyMWM3MGQwOGU4Yzg1NzQxM2E3MGJkYjczNTQyOGQ3MjE4ZmMxNWUzYjNmYjI2M2M3MzZlNTdhMjY3YWMzNGY2ZDgxZTQ1MTU4MWU1OTI5YTFhNjg1ZmYyMDdhOTkxOThhYTg0Y2IifQ.CMhidg5WHGPCMBqylWBfvx85aUfOAHy4OiljGHD2_Gd7DLF2JHcASGQm6SxzoIdHJdSl2vhZEYpw6tv3wgTodw&domain=72F141D1-800B-47BB-AC6D-7774E70E799A", "es");
+			es("pushOn");
+		</script>
+
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-PKZ5GP2');</script>
+		<!-- End Google Tag Manager -->
+	</head>
+
+	<body class="page-template-default page page-id-13782 wp-custom-logo wp-embed-responsive singular enable-search-modal missing-post-thumbnail has-no-pagination not-showing-comments show-avatars footer-top-visible elementor-default elementor-kit-6046 elementor-page elementor-page-13782">
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PKZ5GP2"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+<!--Header-->
+			<header id="site-header">
+		<div id="topnav">
+			<div class="container">
+				<div id="logo">
+					<div class="site-logo faux-heading"><a href="https://prometheus.org.ua/" class="custom-logo-link" rel="home"><img width="883" height="142" src="https://prometheus.org.ua/wp-content/uploads/2021/03/Prometheus_logos.ai_.svg?x51294" class="custom-logo" alt="Prometheus" /></a><span class="screen-reader-text">Prometheus</span></div>				</div>
+				<nav id="top-navigation">
+					<div class="menu-main-menu-container"><ul id="primary" class="mainmenu"><li id="menu-item-6922" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item menu-item-has-children menu-item-6922"><a href="/courses-catalog/" aria-current="page">Курси</a>
+<ul class="sub-menu">
+	<li id="menu-item-6923" class="leftcol menu-item menu-item-type-sidebar menu-item-object-prometheus menu-item-6923"><div class="menuizer-container leftcol menuizer-stack-vertical"><div class="widget-odd widget-first widget-1 menublock widget widget_nav_menu"><div class="widget-content"><h4 class="widget-title">Популярні теми</h4><div class="menu-megamenu-submenu-container"><ul id="menu-megamenu-submenu" class="menu"><li id="menu-item-7534" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7534"><a href="/courses-catalog/business">Бізнес</a></li>
+<li id="menu-item-7532" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7532"><a href="/courses-catalog/it">IT</a></li>
+<li id="menu-item-7533" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7533"><a href="/courses-catalog/english">Англійська мова</a></li>
+<li id="menu-item-7535" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7535"><a href="/courses-catalog/personal-development">Особистий розвиток</a></li>
+<li id="menu-item-7628" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7628"><a href="/courses-catalog/project-management">Проєктний менеджмент</a></li>
+<li id="menu-item-7629" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7629"><a href="/courses-catalog/government-service">Державна служба</a></li>
+<li id="menu-item-7630" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7630"><a href="/courses-catalog/teachers-courses">Для освітян</a></li>
+<li id="menu-item-7631" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-7631"><a href="/courses-catalog/civil-education">Громадянська освіта</a></li>
+</ul></div></div></div><div class="widget_text widget-even widget-last widget-2 menublock widget widget_custom_html"><div class="widget_text widget-content"><div class="textwidget custom-html-widget"><a class="button lightbutton witharrow" href="/courses-catalog/">Всі курси</a></div></div></div></div></li>
+	<li id="menu-item-6924" class="rightcol menu-item menu-item-type-sidebar menu-item-object-prometheus menu-item-6924"><div class="menuizer-container rightcol menuizer-stack-vertical"><div class="widget_text widget-odd widget-first widget-1 menublock widget widget_custom_html"><div class="widget_text widget-content"><div class="textwidget custom-html-widget"><div class="orange-menublock">
+	<h4 class="widget-title">
+		Prometheus +
+	</h4>
+	<p>
+	Платні курси від зіркових викладачів, які надають доступ до інтерактивного навчального досвіду нового рівня.
+</p>
+<a class="button whitebutton" href="/courses-catalog/prometheus-plus">Шукати курси</a>
+</div></div></div></div><div class="widget_text widget-even widget-last widget-2 menublock widget widget_custom_html"><div class="widget_text widget-content"><div class="textwidget custom-html-widget"><div class="blue-menublock">
+	<h4 class="widget-title">
+		Безкоштовні курси
+	</h4>
+	<p>
+	Безкоштовні курси від викладачів України та світу, які допоможуть отримати новітні навички у будь-якій сфері.
+</p>
+<a class="button whitebutton" href="/courses-catalog/free-courses">Шукати курси</a>
+</div></div></div></div></div></li>
+</ul>
+</li>
+<li id="menu-item-8246" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8246"><a href="/courses-catalog/prometheus-plus">Prometheus+</a></li>
+<li id="menu-item-8300" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8300"><a href="https://prometheus.org.ua/corporate-learning/">Корпоративне навчання</a></li>
+</ul></div>				
+				</nav>
+				<div class="topsearch">
+					<a href="#" class="searchicon"><svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M14 8C14 11.3137 11.3137 14 8 14C4.68629 14 2 11.3137 2 8C2 4.68629 4.68629 2 8 2C11.3137 2 14 4.68629 14 8ZM12.5838 14.5574C11.2856 15.4666 9.70511 16 8 16C3.58172 16 0 12.4183 0 8C0 3.58172 3.58172 0 8 0C12.4183 0 16 3.58172 16 8C16 9.99981 15.2662 11.8282 14.0532 13.2307C14.0766 13.2502 14.0994 13.2709 14.1213 13.2929L17.7071 16.8787C18.0976 17.2692 18.0976 17.9024 17.7071 18.2929C17.3166 18.6834 16.6834 18.6834 16.2929 18.2929L12.7071 14.7071C12.6604 14.6604 12.6193 14.6102 12.5838 14.5574Z"/>
+</svg>
+</a>
+										<div class="textwidget custom-html-widget">        <div class="courses-catalog-search-box">
+            <form action="/courses-catalog" class="search-form" method="get">
+                <label for="search-form-1">
+                    <span class="screen-reader-text">Що ви хочете вивчити?</span>
+                    <input type="text" autocomplete="off" autofocus name="q" class="catalog_search courses-catalog-search-field" id="search-form-2" placeholder="Що ви хочете вивчити?" />
+                </label>
+                <input type="submit" class="courses-catalog-search-submit" value="">
+                <div class="courses_catalog_search_dropdown_menu">
+                    <div class="courses_catalog_dataset_course"></div>
+                    <div class="courses_catalog_view_all">
+                        <a href="javascript:void(0);" class="courses_catalog_shortcode_view_all_btn">Всі результати</a>
+                    </div>
+                </div>
+                
+            </form>
+        </div>
+
+        <script id="searchDropdownTmpl" type="text/x-jsrender">
+            {{for course_runs}}
+                {{if first_enrollable_paid_seat_price > 0}}
+                    <p><a href="{{:marketing_url}}">{{:title}}</a></p>
+                {{else}}
+                    <p><a href="https://courses.prometheus.org.ua/courses/{{:key}}/about">{{:title}}</a></p>
+                {{/if}}  
+            {{/for}}            
+        </script>
+
+        </div>				</div>
+				<!--registration buttons-->
+				<div class="cabinetarea">
+											<ul class="registerlinks">
+							<li class="login">
+								<a class="logindrop" href="https://courses.prometheus.org.ua/login">Увійти</a>
+							</li>
+							<li class="register"><a class="button blue" href="https://courses.prometheus.org.ua/register">Зареєструватися</a></li>
+
+						</ul>
+									</div>
+				<!-- registration buttons end-->
+			</div>
+		</div>
+
+		</header>
+		<!--end of header-->
+
+		
+<div id="maincontent" class="maincontent" role="main">
+	<section class="entry-content">
+		<article class="post-13782 page type-page status-publish hentry" id="post-13782">
+
+
+
+	<div class="post-inner">
+
+		<div class="entry-content">
+
+			
+        <div class="maincontent">
+                        <style type="text/css">
+                .banner-image {
+                    background: white;
+                }
+                .elementor-widget-container {
+                    margin: 0px 180px 0px 180px;
+                    padding: 0px 0px 0px 0px;
+                }
+                .elementor-widget-container.small {
+                    display: none;
+                }
+                @media (max-width: 1024px) {
+                    .elementor-widget-container {
+                        display: none;
+                    }
+                    .elementor-widget-container.small {
+                        display: block;
+                        margin: 40px 0px 0px 0px;
+                    }
+                }
+                @media (max-width: 767px) {
+                    .elementor-widget-container.small {
+                        margin: 0px 0px 0px 0px;
+                    }
+                }
+            </style>
+            <section class="banner-image">
+                <div class="elementor-widget-container">
+                    <a href="https://prometheus.org.ua/donate/">
+                        <img width="1441" height="141" src="https://prometheus.org.ua/wp-content/uploads/2021/07/обкладинка_краудфандинг-05.png?x51294&amp;x98954" class="attachment-full size-full" alt="" loading="lazy" srcset="https://prometheus.org.ua/wp-content/uploads/2021/07/обкладинка_краудфандинг-05.png 1441w, https://prometheus.org.ua/wp-content/uploads/2021/07/обкладинка_краудфандинг-05-300x29.png 300w, https://prometheus.org.ua/wp-content/uploads/2021/07/обкладинка_краудфандинг-05-1024x100.png 1024w, https://prometheus.org.ua/wp-content/uploads/2021/07/обкладинка_краудфандинг-05-768x75.png 768w, https://prometheus.org.ua/wp-content/uploads/2021/07/обкладинка_краудфандинг-05-1200x117.png 1200w" sizes="(max-width: 1441px) 100vw, 1441px">
+                    </a>
+                </div>
+                <div class="elementor-widget-container small">
+                    <a href="https://prometheus.org.ua/donate/">
+                            <img src="https://prometheus.org.ua/wp-content/uploads/2021/07/700.png?x51294&amp;x98954" title="700" alt="700">
+                    </a>
+                </div>
+            </section>
+            <section class="catalogue-header">
+                <div class="container">
+                    <h1>Каталог програм</h1>
+                </div>
+            </section>
+            
+            <section class="entry-content course-catalogue">
+                <div class="container">
+                    <div class="course-list-area">
+                        <div class="sort-bar">
+                            <div class="sort-area">
+                                <h3>Сортувати</h3>
+                                <form class="sortingform" action="">
+                                    <select name="sorting" id="sorting">
+                                        <option value="expensive_first">Від дорогих до дешевих</option>
+                                        <option value="cheap_first">Від дешевих до дорогих</option>
+                                        <option value="new_first">Спочатку нові</option>
+                                        <option value="popular_first">Спочатку популярні</option>
+                                    </select>
+                                </form>
+                            </div>
+
+                            <div class="filter-area">
+                                <a href="#" class="button filterdropdown">Фільтрувати</a>
+                                <div class="filter-bar">
+                                    <div class="courses_catalog_filters">
+                                        <form class="filterform drop-search-form" action="">        
+                                            <div class="filter-column">
+                                                <div class="form-block slider-drop-price">
+                                                    <div class="price-range">
+                                                        <input type="text" class="sliderValue-drop start" data-index="0" value="99" name="price_start" />
+                                                        <input type="text" class="sliderValue-drop end" data-index="1" value="3000" name="price_end" />
+                                                        <div id="pricerange-slider-drop"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="button-block slider-drop-button">
+                                                <a href="#" class="perform_search button blue">Застосувати</a>
+                                                <a href="#" class="clear_filters resetbutton button verylightbutton">Скинути</a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="course-list" id="courses_catalog_results_field"></div>
+
+                        <div id="courses_catalog_spinner"><!--img src="https://prometheus.org.ua/wp-content/plugins/courses-catalog/public/img/spinner.gif?x51294" /-->Завантаження...</div>
+                    </div>
+
+                    <div class="sidebar">
+                        <div class="courses_catalog_filters">
+                            <h3>Фільтрувати</h3>
+                            <form class="filterform" action="">
+                                <div class="courses_catalog_dynamic_filters"></div>
+                                <div class="form-block">
+                                    <div class="price-range">
+                                        <input type="text" class="sliderValue start" data-index="0" value="99" name="price_start" />
+                                        <input type="text" class="sliderValue end" data-index="1" value="3000" name="price_end" />
+                                        <div id="pricerange-slider"></div>
+                                    </div>
+                                </div>
+                                <div class="button-block">
+                                    <!--a href="#" class="perform_search button blue">Застосувати</a-->
+                                    <a href="#" class="clear_filters resetbutton button verylightbutton">Скинути</a>
+                                </div>
+                            </form>   
+                            <p><br/></p>                         
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <script id="courseTmpl" type="text/x-jsrender">
+            {{for results}}
+                <div class="course-item {{if !is_enrollable}}inactive{{/if}}">
+                    <img src="{{:image.src}}" alt="" class="hoverimg">
+                    {{if first_enrollable_paid_seat_price > 0}}
+                    <figure>
+                        <a href="{{:marketing_url}}">
+                            <span class="price">від {{:first_enrollable_paid_seat_price}} ₴</span>                            
+                            <img class="listimg" src="{{:image.src}}" alt="">
+                        </a>
+                    </figure>
+                    <div class="coursedesc">
+                        <h3 class="coursetitle"><a href="{{:marketing_url}}">{{:title}}</a></h3>
+                        <!--div class="desc">{{:short_description}}</div-->
+                    </div>
+                    {{else}}
+                    <figure>
+                                                <a href="https://courses.prometheus.org.ua/courses/{{:key}}/about">
+                            <span class="price blue">безкоштовно</span>
+                            <img class="listimg" src="{{:image.src}}" alt="">
+                        </a>
+                                            </figure>
+                    <div class="coursedesc">
+                    	                        <h3 class="coursetitle"><a href="https://courses.prometheus.org.ua/courses/{{:key}}/about">{{:title}}</a></h3>
+                                            </div>
+                    {{/if}}
+                </div>
+            {{/for}}
+        </script>
+        
+        <script id="sidebarFilterTmpl" type="text/x-jsrender">
+            {{for dynamic_filters}}
+            <div class="form-block">
+                <h4>{{:category}}</h4>
+                <fieldset>
+                    {{for filters}}
+                    <div class="option">
+                        <input type="checkbox" id="sidebar-{{:id}}" name="dynamic_filters" value="{{:id}}">
+                        <label for="sidebar-{{:id}}">{{:title}}</label>
+                    </div>
+                    {{/for}}
+                </fieldset>
+            </div>
+            {{/for}}
+        </script>
+
+        <script id="mobileFilterTmpl" type="text/x-jsrender">
+            <form class="filterform" action="">        
+                <div class="filter-column">
+                    {{for dynamic_filters}}
+                    <div class="form-block">
+                        <h4>{{:category}}</h4>
+                        <fieldset>
+                            {{for filters }}
+                            <div class="option">
+                                <input type="checkbox" id="mobile-{{:id}}" name="dynamic_filters" value="{{:id}}">
+                                <label for="mobile-{{:id}}">{{:title}}</label>
+                            </div>
+                            {{/for}}
+                        </fieldset>
+                    </div>
+                    {{if filters.length > 6 || ((#index + 1) % 3) == 0}}
+                </div>
+                <div class="filter-column">
+                    {{/if}}
+                    {{/for}}
+                    <div class="price"></div>
+                </div>
+                <div class="button"></div>
+            </form>
+        </script>
+
+        
+		</div><!-- .entry-content -->
+
+	</div><!-- .post-inner -->
+
+
+
+	
+</article><!-- .post -->
+	</section>
+
+	
+</div><!-- #site-content -->
+
+
+<!--Footer-->
+		<footer id="site-footer">
+		<div class="container">
+			<div class="widget-odd widget-first widget-1 footer-col widget widget_nav_menu"><div class="widget-content"><h3 class="widget-title">Prometheus</h3><div class="menu-footer-menu-one-container"><ul id="menu-footer-menu-one" class="menu"><li id="menu-item-10615" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-10615"><a href="https://prometheus.org.ua/about-us/">Про нас</a></li>
+</ul></div></div></div><div class="widget-even widget-2 footer-col widget widget_nav_menu"><div class="widget-content"><h3 class="widget-title">Prometheus+</h3><div class="menu-footer-menu-two-container"><ul id="menu-footer-menu-two" class="menu"><li id="menu-item-8296" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8296"><a href="https://prometheus.org.ua/corporate-learning/">Корпоративне навчання</a></li>
+<li id="menu-item-8394" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8394"><a href="https://prometheus.org.ua/partnership/">Співпраця</a></li>
+</ul></div></div></div><div class="widget_text widget-odd widget-3 large footer-col widget widget_custom_html"><div class="widget_text widget-content"><h3 class="widget-title">Підписатися на новини</h3><div class="textwidget custom-html-widget"><!--div class="textblock">Залишайтесь на зв'язку та першими дізнавайтесь про нові курси Prometheus!</div>
+				<form action="" class="newsletter">
+					<input type="text" placeholder="Ваш емейл"><input class="button orange" type="submit" value="Підписатись">
+				</form-->
+<div role="form" class="wpcf7" id="wpcf7-f8250-o1" lang="uk" dir="ltr">
+<div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+<form action="/courses-catalog/#wpcf7-f8250-o1" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+<div style="display: none;">
+<input type="hidden" name="_wpcf7" value="8250" />
+<input type="hidden" name="_wpcf7_version" value="5.4.2" />
+<input type="hidden" name="_wpcf7_locale" value="uk" />
+<input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f8250-o1" />
+<input type="hidden" name="_wpcf7_container_post" value="0" />
+<input type="hidden" name="_wpcf7_posted_data_hash" value="" />
+<input type="hidden" name="_wpcf7_recaptcha_response" value="" />
+</div>
+<div class="textblock">Залишайтесь на зв'язку та першими дізнавайтесь про нові курси Prometheus!</div>
+<div class="newsletter"><span class="wpcf7-form-control-wrap youremail"><input type="email" name="youremail" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Ваш e-mail" /></span><input type="submit" value="Підписатись" class="wpcf7-form-control wpcf7-submit button orange" /></div>
+<div class="wpcf7-response-output" aria-hidden="true"></div></form></div></div></div></div><div class="widget-even widget-last widget-4 footer-col widget widget_text"><div class="widget-content"><h3 class="widget-title">Мобільні застосунки</h3>			<div class="textwidget"><div class="applogos"><a class="google" target="_blank" style="border: 1px solid #fff; border-radius: 5px;" href="https://play.google.com/store/apps/details?id=org.prometheus.android" rel="noopener"><img src="https://prometheus.org.ua/wp-content/themes/prometheus/assets/images/google-play.svg?x51294" alt="" /></a><a class="apple" target="_blank" style="border: 1px solid #fff; border-radius: 5px;" href="https://itunes.apple.com/us/app/prometheus-online-courses/id1213523151" rel="noopener"><img src="https://prometheus.org.ua/wp-content/themes/prometheus/assets/images/app-store.svg?x51294" alt="" /></a></div>
+</div>
+		</div></div>		</div>
+		<div class="footer-aside">
+			<div class="container">
+				<div class="aside-inner">
+					<div class="footer-aside-nav">
+					<a href="/" class="copyright">© 2021 Prometheus</a>
+											<div class="aside-menu-container">
+							<div class="menu-aside-menu-container"><ul id="asidemenu" class="asidemenu"><li id="menu-item-6927" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6927"><a href="https://prometheus.org.ua/privacy-policy/">Політика конфіденційності</a></li>
+<li id="menu-item-6926" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6926"><a href="https://prometheus.org.ua/offert/">Договір публічної оферти</a></li>
+<li id="menu-item-6925" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6925"><a href="https://prometheus.org.ua/faq/">Допомога</a></li>
+</ul></div>								
+						</div>
+										</div>
+					<div class="paymentlogos">
+						<img class="visa" src="https://prometheus.org.ua/wp-content/themes/prometheus/assets/images/visa-logo.svg?x51294" alt="">
+						<img class="mcard" src="https://prometheus.org.ua/wp-content/themes/prometheus/assets/images/mastercard-logo.svg?x51294" alt="">
+					</div>
+											<div class="social-menu-container">
+							<div class="menu-social-links-menu-container"><ul id="socialmenu" class="socialmenu"><li id="menu-item-6895" class="facebook menu-item menu-item-type-custom menu-item-object-custom menu-item-6895"><a target="_blank" rel="noopener" href="https://www.facebook.com/prometheusmooc">Facebook</a></li>
+<li id="menu-item-6896" class="twitter menu-item menu-item-type-custom menu-item-object-custom menu-item-6896"><a target="_blank" rel="noopener" href="https://twitter.com/prometheusmooc">Twitter</a></li>
+<li id="menu-item-6897" class="instagram menu-item menu-item-type-custom menu-item-object-custom menu-item-6897"><a target="_blank" rel="noopener" href="https://www.instagram.com/prometheus.ua">Instagram</a></li>
+</ul></div>								
+						</div>
+									</div>
+			</div>
+		</div>
+	</footer>
+	
+	<script src="https://prometheus.org.ua/?x51294&amp;w3tc_minify=6d0c7.js"></script>
+
+<script src="https://prometheus.org.ua/?x51294&amp;w3tc_minify=e6deb.js"></script>
+
+<script id='contact-form-7-js-extra'>
+var wpcf7 = {"api":{"root":"https:\/\/prometheus.org.ua\/wp-json\/","namespace":"contact-form-7\/v1"},"cached":"1"};
+</script>
+<script src="https://prometheus.org.ua/?x51294&amp;w3tc_minify=b68ea.js"></script>
+
+<script src="https://prometheus.org.ua/?x51294&amp;w3tc_minify=2b99a.js"></script>
+
+<script id='courses_catalog_js-js-extra'>
+var courses_catalog_ajax_obj = {"ajax_url":"https:\/\/prometheus.org.ua\/wp-admin\/admin-ajax.php","nonce":"cb3dcbe58c","filter":null};
+</script>
+<script src="https://prometheus.org.ua/?x51294&amp;w3tc_minify=db434.js"></script>
+
+<script async src="https://prometheus.org.ua/?x51294&amp;w3tc_minify=258fa.js"></script>
+
+<script src="https://prometheus.org.ua/?x51294&amp;w3tc_minify=698a7.js"></script>
+
+<script src="https://prometheus.org.ua/?x51294&amp;w3tc_minify=53546.js"></script>
+
+<script src="https://prometheus.org.ua/?x51294&amp;w3tc_minify=8f158.js"></script>
+
+<script src="https://prometheus.org.ua/?x51294&amp;w3tc_minify=49f60.js"></script>
+
+<script src="https://prometheus.org.ua/?x51294&amp;w3tc_minify=9097d.js"></script>
+
+<script id='jquery-fancybox-js-after'>
+var fb_timeout, fb_opts={'overlayShow':true,'hideOnOverlayClick':true,'overlayOpacity':0.5,'overlayColor':'#18191F','showCloseButton':true,'width':600,'height':339,'padding':1,'margin':20,'centerOnScroll':false,'enableEscapeButton':true,'autoScale':true };
+if(typeof easy_fancybox_handler==='undefined'){
+var easy_fancybox_handler=function(){
+jQuery('.nofancybox,a.wp-block-file__button,a.pin-it-button,a[href*="pinterest.com/pin/create"],a[href*="facebook.com/share"],a[href*="twitter.com/share"]').addClass('nolightbox');
+/* Inline */
+jQuery('a.fancybox-inline,area.fancybox-inline,li.fancybox-inline a').each(function(){jQuery(this).fancybox(jQuery.extend({},fb_opts,{'type':'inline','autoDimensions':true,'scrolling':'no','easingIn':'easeOutBack','easingOut':'easeInBack','opacity':false,'hideOnContentClick':false,'titleShow':false}))});};
+jQuery('a.fancybox-close').on('click',function(e){e.preventDefault();jQuery.fancybox.close()});
+};
+var easy_fancybox_auto=function(){setTimeout(function(){jQuery('#fancybox-auto').trigger('click')},1000);};
+jQuery(easy_fancybox_handler);jQuery(document).on('post-load',easy_fancybox_handler);
+jQuery(easy_fancybox_auto);
+</script>
+<script src='https://www.google.com/recaptcha/api.js?render=6LfR3vQcAAAAAJSf56vSQz4jyJtpMIGgVrxLRtgs&#038;ver=3.0' id='google-recaptcha-js'></script>
+<script id='wpcf7-recaptcha-js-extra'>
+var wpcf7_recaptcha = {"sitekey":"6LfR3vQcAAAAAJSf56vSQz4jyJtpMIGgVrxLRtgs","actions":{"homepage":"homepage","contactform":"contactform"}};
+</script>
+<script src="https://prometheus.org.ua/?x51294&amp;w3tc_minify=2a6b9.js"></script>
+
+<script src="https://prometheus.org.ua/?x51294&amp;w3tc_minify=3c321.js"></script>
+
+<script src="https://prometheus.org.ua/?x51294&amp;w3tc_minify=13d7d.js"></script>
+
+<script type='text/javascript'>
+(function() {
+				var expirationDate = new Date();
+				expirationDate.setTime( expirationDate.getTime() + 31536000 * 1000 );
+				document.cookie = "pll_language=uk; expires=" + expirationDate.toUTCString() + "; path=/; secure; SameSite=Lax";
+			}());
+</script>
+	<script>
+	/(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+	</script>
+	
+	</body>
+</html>
+
+<!--
+Performance optimized by W3 Total Cache. Learn more: https://www.boldgrid.com/w3-total-cache/
+
+Object Caching 81/86 objects using memcache
+Page Caching using memcache (SSL caching disabled) 
+Minified using memcache
+Database Caching 11/14 queries in 0.004 seconds using memcache
+
+Served from: localhost @ 2021-12-18 06:47:18 by W3 Total Cache
+-->
